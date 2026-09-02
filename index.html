@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nexo | Catálogo</title>
     <link rel="stylesheet" href="assets/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons.css" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
@@ -16,37 +17,37 @@
         <a href="#nosotros">Nosotros</a>
       </nav>
       <button class="cart" type="button" aria-label="Carrito">
-        <img src="assets/icons/cart.png" alt="" />
+        <i class="bi bi-cart3" aria-hidden="true"></i>
         <span>0</span>
       </button>
     </header>
 
     <main>
       <section class="home" id="inicio">
-        <div class="home-hero">
-          <div>
+        <div class="home-hero row align-items-center g-4">
+          <div class="col-7 col-md-7">
             <p class="eyebrow">TECNOLOGÍA PARA TI</p>
             <h1>Encuentra lo que necesitas</h1>
             <p class="home-text">Productos de calidad al mejor precio.</p>
             <button class="home-button" id="viewProducts" type="button">Ver productos</button>
           </div>
-          <div class="hero-image">
+          <div class="col-5 col-md-5"><div class="hero-image">
             <img src="assets/img/headphones.jpeg" alt="Audífonos destacados">
-          </div>
+          </div></div>
         </div>
 
-        <div class="benefits">
-          <article><strong>▣ Envío gratis</strong><span>En pedidos +$50</span></article>
-          <article><strong>◉ Garantía</strong><span>30 días</span></article>
-          <article><strong>♡ Soporte</strong><span>24/7</span></article>
+        <div class="benefits row g-0">
+          <article class="col-12 col-sm-4"><strong><i class="bi bi-truck"></i> Envío gratis</strong><span>En pedidos +$50</span></article>
+          <article class="col-12 col-sm-4"><strong><i class="bi bi-shield-check"></i> Garantía</strong><span>30 días</span></article>
+          <article class="col-12 col-sm-4"><strong><i class="bi bi-headset"></i> Soporte</strong><span>24/7</span></article>
         </div>
 
         <section class="popular-categories">
           <h2>Categorías populares</h2>
-          <div class="category-list">
-            <button type="button" data-category="Fotografía"><img src="assets/img/camera.jpeg" alt="Tecnología"><span>Tecnología</span></button>
-            <button type="button" data-category="Accesorios"><img src="assets/img/lamp.jpeg" alt="Hogar"><span>Hogar</span></button>
-            <button type="button" data-category="Accesorios"><img src="assets/img/backpack.jpg" alt="Accesorios"><span>Accesorios</span></button>
+          <div class="category-list row g-3">
+            <button class="col-4" type="button" data-category="Fotografía"><img src="assets/img/camera.jpeg" alt="Tecnología"><span>Tecnología</span></button>
+            <button class="col-4" type="button" data-category="Accesorios"><img src="assets/img/lamp.jpeg" alt="Hogar"><span>Hogar</span></button>
+            <button class="col-4" type="button" data-category="Accesorios"><img src="assets/img/backpack.jpg" alt="Accesorios"><span>Accesorios</span></button>
           </div>
         </section>
       </section>
