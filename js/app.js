@@ -1,5 +1,4 @@
 const grid = document.getElementById('productGrid');
-const searchInput = document.getElementById('search');
 const categorySelect = document.getElementById('category');
 const resultCount = document.getElementById('resultCount');
 const emptyState = document.getElementById('emptyState');
@@ -11,14 +10,10 @@ let currentPage = 1;
 const productsPerPage = 4;
 
 function getProducts() {
-  const text = searchInput.value.toLowerCase();
-
   return products.filter(function (product) {
     const categoryOk = categorySelect.value === 'all' ||
       product.category === categorySelect.value;
-    const nameOk = product.name.toLowerCase().includes(text);
-
-    return categoryOk && nameOk;
+    return categoryOk;
   });
 }
 
@@ -100,20 +95,12 @@ function showDetail(id) {
   `;
 }
 
-searchInput.oninput = function () {
+document.getElementById('filterButton').onclick = function () {
   currentPage = 1;
   showProducts();
 };
-
-categorySelect.onchange = function () {
-  currentPage = 1;
-  showProducts();
-};
-
-document.getElementById('filterButton').onclick = showProducts;
 
 document.getElementById('clearFilters').onclick = function () {
-  searchInput.value = '';
   categorySelect.value = 'all';
   currentPage = 1;
   showProducts();

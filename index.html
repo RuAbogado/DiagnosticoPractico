@@ -30,21 +30,11 @@
         </div>
 
         <div class="controls">
-          <label class="search-box" for="search">
-            <span>⌕</span>
-            <input id="search" type="search" placeholder="Buscar productos..." autocomplete="off" />
-          </label>
-          <select id="category" aria-label="Filtrar por categoría">
-            <option value="all">Todas las categorías</option>
-            <option value="Audio">Audio</option>
-            <option value="Wearables">Wearables</option>
-            <option value="Fotografía">Fotografía</option>
-            <option value="Accesorios">Accesorios</option>
-          </select>
-          <button class="filter-button btn btn-primary" id="filterButton" type="button">Filtrar</button>
+          <button class="filter-button btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#filterModal">
+            Filtrar productos
+          </button>
         </div>
-
-        <div class="result-bar"><span id="resultCount">0 productos</span><button id="clearFilters" type="button">Limpiar filtros</button></div>
+        <div class="result-bar"><span id="resultCount">0 productos</span></div>
         <div class="product-grid" id="productGrid" aria-live="polite"></div>
         <p class="empty-state" id="emptyState" hidden>No encontramos productos con esa búsqueda.</p>
         <div class="pagination" id="pagination" aria-label="Paginación"></div>
@@ -52,6 +42,32 @@
 
       <section class="detail" id="detalle" hidden aria-live="polite"></section>
     </main>
+
+    <div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="filterTitle">Filtrar productos</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <label class="form-label" for="category">Categoría</label>
+            <select class="form-select" id="category">
+              <option value="all">Todas las categorías</option>
+              <option value="Audio">Audio</option>
+              <option value="Wearables">Wearables</option>
+              <option value="Fotografía">Fotografía</option>
+              <option value="Accesorios">Accesorios</option>
+            </select>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary" id="clearFilters" type="button">Limpiar</button>
+            <button class="btn btn-primary" id="filterButton" type="button" data-bs-dismiss="modal">Aplicar filtro</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer>© 2026 Nexo. Catálogo local de demostración.</footer>
     <script src="js/products.js"></script>
     <script src="js/app.js"></script>
