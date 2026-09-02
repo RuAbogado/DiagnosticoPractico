@@ -83,10 +83,115 @@ nav .active {
 }
 
 .catalog,
-.detail {
+.detail,
+.home {
   max-width: 920px;
   margin: auto;
   padding: 48px 20px;
+}
+
+.home-hero {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 45px;
+  max-width: 720px;
+  margin: 15px auto 42px;
+  align-items: center;
+}
+
+.home-hero h1 {
+  font-size: 42px;
+}
+
+.home-text {
+  max-width: 230px;
+  color: var(--gris);
+  line-height: 1.5;
+}
+
+.home-button {
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 7px;
+  color: white;
+  background: var(--azul);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hero-image {
+  height: 250px;
+  padding: 14px;
+  border-radius: 14px;
+  background: var(--fondo);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 22px 0;
+  border-top: 1px solid var(--borde);
+  border-bottom: 1px solid var(--borde);
+}
+
+.benefits article {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 13px;
+}
+
+.benefits strong {
+  color: var(--texto);
+}
+
+.benefits span {
+  color: var(--gris);
+}
+
+.popular-categories {
+  max-width: 720px;
+  margin: 35px auto 0;
+}
+
+.popular-categories h2 {
+  font-size: 18px;
+}
+
+.category-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.category-list button {
+  border: 0;
+  background: white;
+  color: var(--texto);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.category-list img {
+  display: block;
+  width: 100%;
+  height: 125px;
+  padding: 8px;
+  border-radius: 9px;
+  background: var(--fondo);
+  object-fit: contain;
+}
+
+.category-list span {
+  display: block;
+  margin-top: 7px;
 }
 
 .catalog-heading {
@@ -270,6 +375,12 @@ select,
   align-items: center;
 }
 
+.detail-breadcrumb {
+  margin-bottom: 18px;
+  color: var(--gris);
+  font-size: 13px;
+}
+
 .detail-image {
   overflow: hidden;
   border-radius: 10px;
@@ -283,6 +394,32 @@ select,
 
 .description {
   line-height: 1.5;
+}
+
+.quantity-title {
+  margin: 18px 0 7px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.quantity-control {
+  display: flex;
+  width: 130px;
+  height: 38px;
+  border: 1px solid var(--borde);
+  border-radius: 7px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.quantity-button {
+  width: 34px;
+  height: 34px;
+  border: 0;
+  background: white;
+  color: var(--azul);
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .buy {
@@ -314,12 +451,40 @@ footer {
   }
 
   .catalog,
-  .detail {
+  .detail,
+  .home {
     padding: 35px 16px;
   }
 
   h1 {
     font-size: 28px;
+  }
+
+  .home-hero {
+    grid-template-columns: 1fr 130px;
+    gap: 18px;
+    margin-bottom: 30px;
+  }
+
+  .home-hero h1 {
+    font-size: 29px;
+  }
+
+  .hero-image {
+    height: 180px;
+  }
+
+  .benefits {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .category-list {
+    gap: 8px;
+  }
+
+  .category-list img {
+    height: 92px;
   }
 
   .catalog-heading {
