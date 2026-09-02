@@ -86,7 +86,9 @@ function showDetail(id) {
   detail.hidden = false;
   detail.innerHTML = `
     <nav class="detail-breadcrumb" aria-label="Ruta de navegación">
-      Inicio / Productos / ${product.category} / ${product.name}
+      <button type="button" data-action="home">Inicio</button> /
+      <button type="button" data-action="products">Productos</button> /
+      ${product.category} / ${product.name}
     </nav>
     <button class="back">← Volver a productos</button>
     <div class="detail-card">
@@ -153,6 +155,14 @@ grid.onclick = function (event) {
 };
 
 detail.onclick = function (event) {
+  if (event.target.dataset.action === 'home') {
+    showHome();
+  }
+
+  if (event.target.dataset.action === 'products') {
+    showCatalog();
+  }
+
   if (event.target.className === 'back') {
     showCatalog();
   }

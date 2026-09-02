@@ -371,6 +371,18 @@ select,
   font-size: 13px;
 }
 
+.detail-breadcrumb button {
+  padding: 0;
+  border: 0;
+  color: var(--azul);
+  background: transparent;
+  cursor: pointer;
+}
+
+.detail-breadcrumb button:hover {
+  text-decoration: underline;
+}
+
 .detail-image {
   overflow: hidden;
   border-radius: 10px;
