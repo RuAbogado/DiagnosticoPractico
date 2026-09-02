@@ -88,7 +88,8 @@ function showDetail(id) {
     <nav class="detail-breadcrumb" aria-label="Ruta de navegación">
       <button type="button" data-action="home">Inicio</button> /
       <button type="button" data-action="products">Productos</button> /
-      ${product.category} / ${product.name}
+      <button type="button" data-action="category" data-category="${product.category}">${product.category}</button> /
+      ${product.name}
     </nav>
     <button class="back">← Volver a productos</button>
     <div class="detail-card">
@@ -161,6 +162,13 @@ detail.onclick = function (event) {
 
   if (event.target.dataset.action === 'products') {
     showCatalog();
+  }
+
+  if (event.target.dataset.action === 'category') {
+    categorySelect.value = event.target.dataset.category;
+    currentPage = 1;
+    showCatalog();
+    showProducts();
   }
 
   if (event.target.className === 'back') {
