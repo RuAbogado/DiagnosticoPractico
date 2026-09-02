@@ -62,6 +62,12 @@ nav .active {
   cursor: pointer;
 }
 
+.cart img {
+  width: 21px;
+  height: 21px;
+  vertical-align: middle;
+}
+
 .cart span {
   padding: 2px 5px;
   border-radius: 10px;
@@ -173,14 +179,15 @@ select,
 }
 
 .product-image {
-  height: 190px;
+  height: 155px;
   background: var(--fondo);
 }
 
 .product-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  padding: 10px;
+  object-fit: contain;
 }
 
 .product-info {
@@ -325,7 +332,7 @@ footer {
   }
 
   .product-image {
-    height: auto;
+    height: 115px;
   }
 
   .detail-card {
