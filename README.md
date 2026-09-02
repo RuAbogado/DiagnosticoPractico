@@ -12,7 +12,7 @@ No requiere instalación, servidor, Internet, Bootstrap ni framework. Abre el ar
 - `css/styles.css`: estilos para escritorio y móvil.
 - `js/products.js`: productos de demostración locales.
 - `js/app.js`: búsqueda, filtro, paginación y vista de detalle.
-- `assets/images`: imágenes locales de los productos.
+- `assets/img`: imágenes locales de los productos.
 
 ## Funciones
 
